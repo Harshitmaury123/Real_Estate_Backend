@@ -15,6 +15,7 @@ def hello_world():
 
 @app.route("/get-location-names")
 def get_location_names():
+    util.load_locations()
     response = jsonify({
         "locations": util.get_locations()
     })
